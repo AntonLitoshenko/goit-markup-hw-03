@@ -16,12 +16,40 @@ body {
   line-height: var(--primary-line-height);
   font-weight: var(--main-font-waight);
 }
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
   color: inherit;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* ==========LOGO========== */
@@ -32,6 +60,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-color);
+  margin-right: 92px;
 }
 .logo-header {
   color: #000000;
@@ -41,6 +70,10 @@ body {
 }
 
 /* ==========HEADER========== */
+.header-container {
+  display: flex;
+  align-items: center;
+}
 
 .nav-list-link {
   font-weight: 500;
@@ -54,10 +87,29 @@ body {
 
 .nav-list {
   color: var(--main-dark-color);
+  display: flex;
+}
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+.header-contacts-item:not(last-child) {
+  margin-right: 50px;
+}
+.nav-list-item:not(last-child) {
+  margin-right: 50px;
+}
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 /* ==========HERO========== */
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
-.header-discription {
+.hero-discription {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -65,6 +117,10 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 696px;
 }
 .modal-btn {
   font-family: inherit;
@@ -78,6 +134,11 @@ body {
   color: #ffffff;
   background-color: var(--accent-color);
   cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 200px;
+  padding: 8px 30px;
+  border-radius: 4px;
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -97,6 +158,19 @@ body {
 .advantage-discription {
   line-height: 1.71;
 }
+.advantage {
+  padding-top: 94px;
+}
+.advantage-list {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.advantage-list-item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc((100%-120px) / 4);
+}
 
 /* ==========ABOUT========== */
 
@@ -106,6 +180,11 @@ body {
   line-height: 1.17;
   text-align: center;
   color: var(--main-dark-color);
+  margin-bottom: 50px;
+}
+.about-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ==========TEAM========== */
@@ -126,7 +205,24 @@ body {
 .team {
   background-color: #f5f4fa;
 }
-
+.team-list {
+  display: flex;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.team-list-item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc((100%-120px) / 4);
+}
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px;
+  border-top: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
 /* ==========FOOTER========== */
 .address {
   font-weight: var(--secondary-font-waight);
