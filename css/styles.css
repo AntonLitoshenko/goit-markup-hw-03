@@ -166,11 +166,8 @@ img {
 }
 .advantage-list {
   display: flex;
-  flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  padding: 0;
-  list-style: none;
 }
 .advantage-list-item {
   margin-top: 30px;
@@ -214,21 +211,21 @@ img {
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  padding: 0;
-  list-style: none;
 }
 .team-list-item {
+  flex-basis: calc((100% / 4)-30px);
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc((100%-120px) / 4);
-}
-.team-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
   border: 1px;
   border-top: none;
   border-radius: 4px;
   background-color: #ffffff;
+}
+.team-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 /* ==========FOOTER========== */
 .address {
@@ -309,7 +306,7 @@ img {
 .projects-list-item {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc((100%-90px) / 3);
+  flex-basis: calc((100% / 3)-30px);
 }
 .projects-card {
   padding: 20px 24px;
