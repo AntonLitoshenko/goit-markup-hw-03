@@ -93,15 +93,18 @@ img {
   display: flex;
   margin-left: auto;
 }
-.header-contacts-item:not(last-child) {
+.header-contacts-item:not(:last-child) {
   margin-right: 50px;
 }
-.nav-list-item:not(last-child) {
+.nav-list-item:not(:last-child) {
   margin-right: 50px;
 }
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
+  border: 1px solid #ececec;
+  border-top: none;
+  border-top: none;
 }
 /* ==========HERO========== */
 .hero {
@@ -163,8 +166,11 @@ img {
 }
 .advantage-list {
   display: flex;
+  flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
+  padding: 0;
+  list-style: none;
 }
 .advantage-list-item {
   margin-top: 30px;
@@ -199,16 +205,17 @@ img {
   line-height: 1.19;
   text-align: center;
 }
-.team-discription {
-  font-weight: var(--secondary-font-waight);
-}
+
 .team {
   background-color: #f5f4fa;
 }
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
+  padding: 0;
+  list-style: none;
 }
 .team-list-item {
   margin-top: 30px;
@@ -227,6 +234,7 @@ img {
 .address {
   font-weight: var(--secondary-font-waight);
   font-style: normal;
+  margin-top: 20px;
 }
 .footer-link {
   line-height: 1.17;
@@ -243,6 +251,15 @@ img {
 }
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.address-list {
+  display: flex;
+  flex-direction: column;
+}
+.address-list-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 /* ==========PORTFOLIO========== */
@@ -254,11 +271,16 @@ img {
   text-align: center;
   background-color: #f5f4fa;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 4px 20px;
 }
 .portfolio-nav-list-btn:hover,
 .portfolio-nav-list-btn:focus {
   color: #ffffff;
   background-color: var(--accent-color);
+}
+.portfolio-nav-list-item:not(:last-child) {
+  margin-right: 8px;
 }
 .projects-title {
   font-weight: 700;
@@ -266,9 +288,32 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-dark-color);
+  margin-bottom: 4px;
 }
 .projects-discription {
   font-weight: var(--secondary-font-waight);
   font-size: 16px;
   line-height: 1.88;
+}
+.portfolio-nav-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.projects-list-item {
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-basis: calc((100%-90px) / 3);
+}
+.projects-card {
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
